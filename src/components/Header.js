@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary justify-content-between d-flex">
         <h1>
-          CRUD - REACT, Redux, REST API & Axios
+          <Link to={'/'} className="text-light">CRUD - REACT, Redux, REST API & Axios</Link>
         </h1>
-        <button type="button" className="btn btn-danger nuevo-post">Agregar Producto +</button>
+        <Link to={'/products/new'} className="btn btn-danger nuevo-post">Nuevo Producto +</Link>
       </nav>
     );
-  } 
+  }
 }
 
 export default Header;
